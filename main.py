@@ -17,7 +17,7 @@ def main() -> None:
             continue
 
         nickname = player.get("nickname")
-        race_data = player.get("race", {})
+        race_data = player.get("race") or {}
         race_name = (
             race_data.get("name") if isinstance(race_data, dict) else None
         )
@@ -78,9 +78,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    print(
-        Player.objects.count(),
-        Race.objects.count(),
-        Guild.objects.count(),
-        Skill.objects.count(),
-    )
