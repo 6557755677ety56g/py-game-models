@@ -78,7 +78,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    # Якщо потрібно перевірити кількість у скрипті, додавайте print сюди:
     print(
         Player.objects.count(),
         Race.objects.count(),
